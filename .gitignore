@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+# Datos personales: NO subir a GitHub
+data/*.db
+data/*.db-*
+*.xlsx

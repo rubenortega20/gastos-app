@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Gastos">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Gastos</title>
+</head>
+<body>
+  <header class="top">
+    <h1 id="titulo">Agregar</h1>
+    <div id="selector-mes" class="mes" hidden>
+      <button id="mes-prev" aria-label="Mes anterior">‹</button>
+      <span id="mes-label"></span>
+      <button id="mes-next" aria-label="Mes siguiente">›</button>
+    </div>
+  </header>
+
+  <main id="vista"></main>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="agregar" class="activo"><span>＋</span>Agregar</button>
+    <button data-tab="resumen"><span>▥</span>Resumen</button>
+    <button data-tab="movs"><span>☰</span>Movimientos</button>
+    <button data-tab="mas"><span>⋯</span>Más</button>
+  </nav>
+
+  <div id="hoja" class="hoja" hidden>
+    <div class="hoja-fondo" data-cerrar></div>
+    <div class="hoja-panel" role="dialog" aria-modal="true">
+      <h2 id="hoja-titulo"></h2>
+      <form id="hoja-form" autocomplete="off"></form>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
